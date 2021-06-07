@@ -1,0 +1,26 @@
+## To create copy or clone of your customized enviromnment using commit command then run:
+     - docker commit <container_name> <image_name:tag>
+     
+## To save the docker image inside a tar file so that you can share it someone easily, run: (Export)
+     - docker save -o <any_file_name>.tar <image_name:tag>
+
+## To load the docker image through tar file inside system, run:  (Import)
+     - docker load -i <file_name>.tar
+     
+## To share your image inside docker hub public registry, your image should have docker hub user name first.
+     -  docker  commit  <container_name>  <dockerHub_user_name>/<image_name:tag>
+     
+## To rename your image name, run:
+     - docker  tag  <dockerHub_user_name>/<earlier_image_name>  <dockerHub_user_name>/<new_image_name>
+     
+## To login inside docker hub through CLI, run:
+     - docker login   ( then write usr name & passwd in the next line after running this command))
+     
+## To push image to dockerhub, run:
+     - docker push <dockerHub_user_name>/<image_name:tag>
+     
+## To pull any image from dockerhub, run:
+     -  docker pull <image:tag>
+     
+## To remove the image forcefully, run:
+      - docker rmi -f <image_name>
